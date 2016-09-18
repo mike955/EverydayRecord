@@ -10,7 +10,13 @@
     "antd": "^1.11.1",
     "babel-runtime": "^6.11.6",
     "express": "^4.14.0",
-    "path": "^0.12.7"
+    "is-expression": "^3.0.0",
+    "jade": "^1.11.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta6",
+    "pug-code-gen": "^1.1.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -38,6 +44,7 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-3": "^6.11.0",
     "babel-watch": "^2.0.2",
+    "bower": "^1.7.9",
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     "nodemon": "^1.10.0"

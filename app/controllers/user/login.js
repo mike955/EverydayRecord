@@ -2,7 +2,7 @@
 
 //index page
 module.exports = function(req ,res){
-	res.render('layout',{
+	res.render('index/index',{
 
 	});
 } 
