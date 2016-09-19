@@ -6,7 +6,7 @@ module.exports = {
 		host: '192.168.1.101',
 		user: 'root',
 		password: '',
-		database: 'expressDemo_test',
+		database: 'everyday_record',
 		port: 3306
 	},
 	pool:{
