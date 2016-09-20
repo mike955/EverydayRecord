@@ -5,5 +5,30 @@ html(lang="en")
 		title #{title}
 		include ../../includes/head
 	body
-		block content
+		.container
+			h1.text-center 这里应该是一副图片	
+		.container
+			form.form-horizontal(method='post' action='/signin')
+				.form-group
+					.col-sm-offset-1
+						label.col-sm-3.control-label(for='username') 用户名
+						.col-sm-4
+							input.form-control(name='username' placeholder='请输入用户名')
+				.form-group
+					.col-sm-offset-1
+						label.col-sm-3.control-label(for='password') 密码
+						.col-sm-4
+							input.form-control(name='password' type='password' placeholder='请输入密码')
+				.form-group
+					.col-sm-offset-3.col-sm-3
+						h3.text-danger.text-center #{info}
+				.form-group
+					.col-sm-offset-3.col-sm-1
+						button.btn.btn-success(type='submit') 登陆
+					.col-sm-1
+						a.btn.btn-primary(href='/') 取消	
+					.col-sm-1
+						a.btn.btn-danger(href='/user/find_password') 忘记密码	
+					//- .col-sm-1
+					//- 	a.btn.btn-default.btn-xs(href='/user/signup') 注册
 		include ../../includes/footer

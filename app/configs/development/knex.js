@@ -3,9 +3,9 @@
 module.exports = {
 	client: 'mysql',
 	connection: {
-		host: '192.168.1.101',
+		host: 'localhost',
 		user: 'root',
-		password: '',
+		password: '3564423',
 		database: 'everyday_record',
 		port: 3306
 	},

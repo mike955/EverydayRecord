@@ -21,14 +21,14 @@ html(lang="en")
 							input.form-control(name='password' type='password' placeholder='请输入密码')
 				.form-group
 					.col-sm-offset-1
-						label.col-sm-3.control-label(for='phone') 电话号码
-						.col-sm-4
-							input.form-control(name='phone' type='phone' placeholder='请输入电话号码')
-				.form-group
-					.col-sm-offset-1
 						label.col-sm-3.control-label(for='repassword') 确认密码
 						.col-sm-4
 							input.form-control(name='repassword' type='password' placeholder='请确认密码')
+				.form-group
+					.col-sm-offset-1
+						label.col-sm-3.control-label(for='phone') 电话号码
+						.col-sm-4
+							input.form-control(name='phone' type='phone' placeholder='请输入电话号码')
 				.form-group
 					.col-sm-offset-1
 						label.col-sm-3.control-label(for='password_question') 选择密保问题
@@ -44,9 +44,9 @@ html(lang="en")
 							input.form-control(name='password_answer' placeholder='请输入密保问题答案，用户找回密码')
 				.form-group
 					.col-sm-offset-1
-						label.col-sm-3.control-label(for='sex') 性别
+						label.col-sm-3.control-label(for='gender') 性别
 						.col-sm-4
-							select.form-contol.input-sm(name='sex')
+							select.form-contol.input-sm(name='gender')
 								option 男
 								option 女
 				.form-group
@@ -55,10 +55,13 @@ html(lang="en")
 						.col-sm-4
 							input.form-control(name='email' placeholder='请输入正确格式邮箱')
 				.form-group
-					h3.text-danger.text-center #{info}
+					.col-sm-offset-1.col-sm-9
+						h3.text-danger.text-center #{info}
 				.form-group
 					.col-sm-offset-4.col-sm-1
 						button.btn.btn-success(type='submit') 注册
 					.col-sm-1
-						a.btn.btn-primary(href='/') 取消
+						a.btn.btn-warning(href='/') 取消
+					//- .col-sm-1
+					//- 	a.btn.btn-default.btn-xs(href='/user/signin') 登陆
 		include ../../includes/footer
