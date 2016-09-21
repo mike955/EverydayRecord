@@ -1,0 +1,24 @@
+.container-left{
+	height: 800px;
+	background-color: #444359;
+	border-radius: 5px 0;
+	padding-top: 20px;
+}
+
+li {
+	list-style: none;
+	font-size: 20px;
+}
+
+.link i{
+	color:  #FF5151;
+}
+
+li a{
+	color: #FFFFFF;
+}
+
+li a:hover{
+	text-decoration: none;
+	color: #000000
+}

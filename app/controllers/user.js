@@ -111,8 +111,13 @@ exports.signin = async function (req, res) {
 
 	//登陆成功
 	if(result === 'success'){
-		res.render('index/index',{
-			title: 'login'
-		})
+		res.redirect('/main');
 	}
+}
+
+//main
+exports.main = async function(req, res){
+	res.render('user/index', {
+		title: 'main'
+	});
 }

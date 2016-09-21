@@ -1,0 +1,13 @@
+extend ../index/main
+
+block content
+	form.form-horizontal('method='post', action='/bill/create')
+		.form-group
+			.col-sm-offset-1
+				label.col-sm-3.control-label(for='ways') 消费方式
+				label.col-sm-3.control-label(for='type') 消费用途
+				label.col-sm-3.control-label(for='money') 消费金额
+	script(type='text/javascript').
+		window.onload = function(){
+			$('.bill_create').css("color", "black");
+		}

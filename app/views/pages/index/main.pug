@@ -1,1 +1,60 @@
-extend ../../layout
+//- 这是用户登录成功后模板
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title #{title}
+		link(href='/css/index.css' rel="stylesheet")
+		include ../../includes/head
+	body
+		.container
+			h1.text-center 这里应该是一副图片
+		.container
+			.row
+				.col-md-3.container-left
+					ul#accordion.accordion
+						li
+							.link
+								i 账单
+							ul.bill
+								li
+									a.bill_create(href='/bill/create') 增加记账
+								li
+									a.bill_history(href="bill/history") 查看账单
+						li
+							.link
+								i 备忘录
+							ul.memo
+								li
+									a.mome_create(href='/memo/create') 增加备忘录
+								li
+									a.memo_history(href="/memo/history") 查看备忘录
+						li
+							.link
+								i 大事件
+							ul.bill
+								li
+									a.breaking_new_create(href='/breaking_new/create') 增加大事件
+								li
+									a.breaking_new_history(href="/breaking_new/history") 查看大事件
+						li
+							.link
+								i 学习计划
+							ul.bill
+								li
+									a.study_plan_create(href='/study_plan/create') 增加学习计划
+								li
+									a.study_plan_history(href="/study_plan/history") 查看学习计划
+								li
+									a.study_plan_confirm(href="/study_plan/confirm") 确认学习计划									
+						li
+							.link
+								i 学习心得
+							ul.bill
+								li
+									a.study_exp_create(href='/study_exp/create') 增加学习心得
+								li
+									a.study_exp_history(href="/study_exp/history") 查看学习心得	
+				.col-md-9.container-right
+					block content
+		include ../../includes/footer
