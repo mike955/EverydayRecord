@@ -1,12 +1,48 @@
 extend ../index/main
 
 block content
-	form.form-horizontal('method='post', action='/bill/create')
-		.form-group
-			.col-sm-offset-1
-				label.col-sm-3.control-label(for='ways') 消费方式
-				label.col-sm-3.control-label(for='type') 消费用途
-				label.col-sm-3.control-label(for='money') 消费金额
+	.container
+		form.form-horizontal(method="post", action="/")
+			.form-group
+			.form-group
+			.form-group
+				.col-md-offset-1
+					label.col-md-2.control(for='ways' style="font-size:20px; color:#F4A460") 消费方式
+				.col-md-3
+					select.form-control.input-md(name = 'ways')
+						option 天猫超市
+						option 京东超市
+						option 淘宝天猫
+						option 京东商城
+						option 当当网
+						option 亚马逊
+						option 现金消费
+						option 唯品会
+						option 其它
+			.form-group
+				.col-md-offset-1
+					label.col-md-2.control(for='types' style="font-size:20px; color:#F4A460") 消费用途
+				.col-md-3
+					select.form-control.input-md(name = 'types')
+						option 生活用品
+						option 学习书籍
+						option 电子产品
+						option 公交地铁打车
+						option 饭卡充值
+						option 餐饮
+						option 礼品赠品
+						option 其它
+			.form-group
+				.col-md-offset-1
+					label.col-md-2.control(for="money" style="font-size:20px; color:#F4A460") 金额
+					.col-md-3
+						input.form-control(name="money" type='text', placeholder="输入消费金额")
+			.form-group
+				.col-md-oddset-9
+					h3.text-danger.text-center #{info}
+			.form-group
+				.col-md-offset-3.col-md-1
+					button.btn.btn-success(type='submit') 提交											
 	script(type='text/javascript').
 		window.onload = function(){
 			$('.bill_create').css("color", "black");

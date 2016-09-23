@@ -24,8 +24,8 @@ CREATE TABLE `core_account`(
 CREATE TABLE `core_user_bill`(
 	`id` INT(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
 	`accountID` int(11) unsigned NOT NULL COMMENT '用户accountID',
-	`ways` tinyint(4) unsigned NOT NULL COMMENT '消费方式(1:天猫超市，2:京东超市，3:天猫淘宝购物，4:京东购物，5:当当网购物，6:亚马逊购物，7:现金消费，10:其它)',
-	`type` tinyint(4) unsigned NOT NULL COMMENT '消费用途(1:生活用品，2:书本，3:电子产品，4:公交地铁，5:饭卡充值，6:餐饮，7:礼品赠品，8:其它)',
+	`ways` tinyint(4) unsigned NOT NULL COMMENT '消费方式(1:天猫超市，2:京东超市，3:淘宝天猫，4:京东商城，5:当当网，6:亚马逊，7:现金消费，8:唯品会，9:其它)',
+	`type` tinyint(4) unsigned NOT NULL COMMENT '消费用途(1:生活用品，2:学习书籍，3:电子产品，4:公交地铁打车，5:饭卡充值，6:餐饮，7:礼品赠品，8:其它)',
 	`money` decimal(10,2) unsigned NOT NULL COMMENT '消费金额',
 	`createdTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 	`updatedTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
