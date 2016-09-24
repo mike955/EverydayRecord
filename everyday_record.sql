@@ -1,6 +1,6 @@
-CREATE SCHEMA `everyday_record`;
 
--
+
+
 -- Create syntax for TABLE 'core_account'
 CREATE TABLE `core_account`(
 	`id` INT(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '账户ID',
