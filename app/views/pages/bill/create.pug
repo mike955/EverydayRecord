@@ -2,7 +2,7 @@ extend ../index/main
 
 block content
 	.container
-		form.form-horizontal(method="post", action="/")
+		form.form-horizontal(method="post", action="/bill/create")
 			.form-group
 			.form-group
 			.form-group
@@ -38,11 +38,11 @@ block content
 					.col-md-3
 						input.form-control(name="money" type='text', placeholder="输入消费金额")
 			.form-group
-				.col-md-oddset-9
-					h3.text-danger.text-center #{info}
+				.col-md-offset-3
+					h3.text-danger #{info}
 			.form-group
 				.col-md-offset-3.col-md-1
-					button.btn.btn-success(type='submit') 提交											
+					button.btn.btn-success(type='submit') 提交
 	script(type='text/javascript').
 		window.onload = function(){
 			$('.bill_create').css("color", "black");

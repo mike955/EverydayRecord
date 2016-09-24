@@ -111,6 +111,7 @@ exports.signin = async function (req, res) {
 
 	//登陆成功
 	if(result === 'success'){
+		req.session.user = user_data;
 		res.redirect('/main');
 	}
 }
@@ -118,6 +119,13 @@ exports.signin = async function (req, res) {
 //main
 exports.main = async function(req, res){
 	res.render('user/index', {
-		title: 'main'
+		title: 'main',
+		user: req.session.user
 	});
+}
+
+//logout
+exports.logout = function(req, res){
+	delete req.session.user;
+	res.redirect('/');
 }

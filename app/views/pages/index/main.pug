@@ -11,9 +11,9 @@ html(lang="en")
 			.container
 				.navbar-header
 					p.navbar-text.navbar-right
-						span 欢迎您，
+						span 欢迎您，#{user.username}
 						span &nbsp; | &nbsp;
-						a.navbar-link(href="/") 退出			
+						a.navbar-link(href="/logout") 退出			
 		.row
 			h1.text-center 这里应该是一副图片
 		.container
