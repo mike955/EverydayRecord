@@ -258,21 +258,25 @@ exports.statistic = async function(req, res){
 		console.log(error);
 	}
 
-	let sumWays_new = [];
-	let sumTypes_new = [];
+	let sumWays_new = []; 			//消费方式比
+	let sumTypes_new = [];			//消费用途比
+	let sumWays_money = []; 		//消费方式钱数量
+	let sumTypes_money = [];		//消费用途钱数量
 	let sumMoney_new;
 
 	_.forEach(sumMoney[0], function(value){
 		sumMoney_new =  value;
 	});
 
-	//将消费方式比放进一个数组sumWays_new
+	//将消费方式比和每一个消费方式的钱数量放进一个数组sumWays_new
 	await sumWays.map(function(value, key){	
 		_.forEach(value[0], function(value){
 			if(value > 0){
 				sumWays_new[key] = (value/sumMoney_new).toFixed(2);
+				sumWays_money[key] = value;
 			}else{
 				sumWays_new[key] = 0;
+				sumWays_money[key] = 0;
 			}
 		})
 	});
@@ -282,8 +286,10 @@ exports.statistic = async function(req, res){
 		_.forEach(value[0], function(value){
 			if(value > 0){
 				sumTypes_new[key] = (value/sumMoney_new).toFixed(2);
+				sumTypes_money[key] = value;
 			}else{
 				sumTypes_new[key] = 0;
+				sumTypes_money[key] = 0;
 			}
 		})
 	});
@@ -291,6 +297,25 @@ exports.statistic = async function(req, res){
 	res.render('bill/statistic', {
 		user: req.session.user,
 		data_ways: sumWays_new,
-		data_types: sumTypes_new
+		data_types: sumTypes_new,
+		sum: sumMoney_new,
+		way1: sumWays_money[0],
+		way2: sumWays_money[1],
+		way3: sumWays_money[2],
+		way4: sumWays_money[3],
+		way5: sumWays_money[4],
+		way6: sumWays_money[5],
+		way7: sumWays_money[6],
+		way8: sumWays_money[7],
+		way9: sumWays_money[8],
+
+		type1: sumTypes_money[0],
+		type2: sumTypes_money[1],
+		type3: sumTypes_money[2],
+		type4: sumTypes_money[3],
+		type5: sumTypes_money[4],
+		type6: sumTypes_money[5],
+		type7: sumTypes_money[6],
+		type8: sumTypes_money[7],
 	});
 }

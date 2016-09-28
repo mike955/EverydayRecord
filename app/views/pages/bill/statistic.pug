@@ -1,13 +1,67 @@
 extend ../index/main
 
 block content
-	.data_ways(style="display: none") #{data_ways}
-	.data_types(style="display: none") #{data_types}
+	.container
+		.data_ways(style="display: none") #{data_ways}
+		.data_types(style="display: none") #{data_types}
+		.row
+			span
+				h4 总计消费(元): #{sum}
+			span(style="display: inline-block")
+				h5 天猫超市: #{way1}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 京东超市: #{way2}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 淘宝天猫: #{way3}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 京东商城: #{way4}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 当当网: #{way5}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 亚马逊: #{way6}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 现金: #{way7}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 唯品会: #{way8}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 其它: #{way9}
 	.container
 		.row(style="margin-top:10px")
 			.col-md-9
 				#highcharts_way
-		.row(style="height:2px; background: black; margin-top: 30px; margin-left: 100px; width: 600px")
+		.row(style="height:1px; background: black; margin-top: 30px;width: 750px; opacity: 0.5")
+		.row
+			span(style="display: inline-block")
+				h5 生活用品: #{type1}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 学习书籍: #{type2}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 电子产品: #{type3}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 公交地铁打车: #{type4}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 饭卡充值: #{type5}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 餐饮: #{type6}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 礼品赠品: #{type7}
+			span(style="display: inline-block") &nbsp;|&nbsp;
+			span(style="display: inline-block")
+				h5 其它: #{type8}
 		.row(style="margin-top: 30px; padding-buttom: 50px")
 			.col-md-9
 				#highcharts_type
