@@ -1,0 +1,46 @@
+extend ../index/main
+
+block content
+	.container
+		form.form-horizontal(method="post", action="/study_experience/create")
+			.form-group
+			.form-group
+			.form-group
+				label.col-md-2.control-label(for='subject' style="font-size:20px; color:#F4A460") 学科
+				.col-md-3.col-md-offset-1
+					select.form-control.input-md(name = 'subject')
+						option 计算机
+			.form-group
+				label.col-md-2.control-label(for='category' style="font-size:20px; color:#F4A460") 类别
+				.col-md-3.col-md-offset-1
+					select.form-control.input-md(name = 'category')
+						option 数据库
+						option Node.js
+						option 源码
+						option NPM模块
+						option 架构
+						option JavaScript
+						option React
+						option HTML+CSS
+						option 其它
+			.form-group
+				label.col-md-2.control-label(for='content' style="font-size:20px; color:#F4A460") 学习心得
+				.col-md-6.col-md-offset-1
+					textarea.form-control(row=10, name='content', placeholder='内容' style="height: 400px")
+			.form-group
+				.col-md-offset-3
+					h3.text-danger #{info}
+			.form-group
+				.col-md-offset-3.col-md-1
+					button.btn.btn-success(type='submit') 提交
+	script(type='text/javascript').
+		window.onload = function(){
+			$('.study_experience_create').css("color", "black");
+			$('#datetimepicker').datetimepicker({
+				language: 'zh-CN',
+				format: 'yyyy-mm-dd hh:ii',
+				autoclose: true,
+				todayBtn: true,
+				todayHighlight: true
+			});
+		}

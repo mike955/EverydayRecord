@@ -1,0 +1,46 @@
+extend ../index/main
+
+block content
+	.container
+		.col-md-9
+			table#table
+				thead
+					tr
+						th.text-center 消费方式
+						th.text-center 消费用途
+						th.text-center 金额
+						th.text-center 时间
+						th.text-center 更新
+						th.text-center 删除
+				tbody
+					each bill in bills
+						tr
+							td #{bill.ways}
+							td #{bill.type}
+							td #{bill.money}
+							td #{bill.createdTime}
+							td: a(target="_blank" href="#") 更新
+							td
+								button.btn.btn-danger.del(type='button') 删除
+	script(type='text/javascript').
+		window.onload = function(){
+			$('.bill_history').css("color", "black");
+			$('#table').bootstrapTable({
+				//- columns: [{
+				//- 	field: 'id',
+				//- 	title: 'Item ID',
+				//- 	align: 'center'
+				//- },{
+				//- 	field: 'id',
+				//- 	title: 'Item ID',
+				//- 	align: 'center'
+				//- },{
+				//- 	field: 'id',
+				//- 	title: 'Item ID',
+				//- 	align: 'center'
+				//- }],
+				pagination: true,
+				search: true
+			});
+
+		}

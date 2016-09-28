@@ -26,13 +26,15 @@ html(lang="en")
 							li
 								a.bill_create(href='/bill/create') 增加记账
 							li
-								a.bill_history(href="bill/history") 查看账单
+								a.bill_history(href="/bill/history") 查看账单
+							li
+								a.bill_statistic(href="/bill/statistic") 账单消费统计
 					li
 						.link
 							i 备忘录
 						ul.memo
 							li
-								a.mome_create(href='/memo/create') 增加备忘录
+								a.memo_create(href='/memo/create') 增加备忘录
 							li
 								a.memo_history(href="/memo/history") 查看备忘录
 					li
@@ -58,9 +60,9 @@ html(lang="en")
 							i 学习心得
 						ul.bill
 							li
-								a.study_exp_create(href='/study_exp/create') 增加学习心得
+								a.study_experience_create(href='/study_experience/create') 增加学习心得
 							li
-								a.study_exp_history(href="/study_exp/history") 查看学习心得	
+								a.study_experience_history(href="/study_experience/history") 查看学习心得	
 			.col-md-9.container-right
 				block content
 		include ../../includes/footer

@@ -38,4 +38,75 @@ export default class Bill{
 		}
 		return result;
 	}
+
+	/*static async findById(req, res){
+		let result;
+
+		try{
+			result = await knex('core_account')
+							.select('username')
+							.where('id', req);
+		} catch(error){
+			console.log(error);
+		}
+		return result;
+	}*/
+
+	static async findAll(req, res){
+		let result;
+
+		try{
+			result = await knex('core_user_bill')
+						    	.select('ways', 'type', 'money', 'createdTime')
+						    	.where('accountID', req);
+		}catch(error){
+			console.log(error);
+		}
+
+		return result;
+	}
+
+	//求money的和
+	static async sumMoney(req, res){
+		let result;
+
+		try{
+			result = await knex('core_user_bill')
+							.sum('money')
+							.where('accountID', req);
+		}catch(error){
+			console.log(error);
+		}
+		return result;
+	}
+
+	//求ways的和
+	static async sumWays(way, accountID, res){
+		let result;
+
+		try{
+			result = await knex('core_user_bill')
+							.sum('money')
+							.where('ways', way)
+							.where('accountID', accountID);
+		}catch(error){
+			console.log(error);
+		}
+		return result;
+	}
+
+	//求type的和
+	static async sumType(type, accountID, res){
+		let result;
+
+		try{
+			result = await knex('core_user_bill')
+							.sum('money')
+							.where('type', type)
+							.where('accountID', accountID);
+		}catch(error){
+			console.log(error);
+		}
+		return result;
+	}
 }

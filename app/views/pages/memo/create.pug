@@ -1,0 +1,39 @@
+extend ../index/main
+
+block content
+	.container
+		form.form-horizontal(method="post", action="/memo/create")
+			.form-group
+			.form-group
+			.form-group
+				.col-md-offset-1
+					label.col-md-2.control-label(for='theme' style="font-size:20px; color:#F4A460") 主题
+				.col-md-3
+					input.form-control(name='theme', placeholder='主题')
+			.form-group
+				.col-md-offset-1
+					label.col-md-2.control-label(for='time' style="font-size:20px; color:#F4A460") 时间
+				.col-md-3
+					input.form-control(name='time', placeholder='时间' id='datetimepicker')
+			.form-group
+				.col-md-offset-1
+					label.col-md-2.control-label(for='content' style="font-size:20px; color:#F4A460") 内容
+				.col-md-5
+					textarea.form-control(row=5, name='content', placeholder='内容' style="height: 100px")
+			.form-group
+				.col-md-offset-3
+					h3.text-danger #{info}
+			.form-group
+				.col-md-offset-3.col-md-1
+					button.btn.btn-success(type='submit') 提交
+	script(type='text/javascript').
+		window.onload = function(){
+			$('.memo_create').css("color", "black");
+			$('#datetimepicker').datetimepicker({
+				language: 'zh-CN',
+				format: 'yyyy-mm-dd hh:ii',
+				autoclose: true,
+				todayBtn: true,
+				todayHighlight: true
+			});
+		}
