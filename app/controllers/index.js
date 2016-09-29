@@ -1,6 +1,9 @@
-//index page
-exports.index= function(req ,res){
-	res.render('index/index',{
+'use strict';
 
-	});
-} 
+export default class Index{
+	static async index(req, res){
+		res.render('index/index',{
+
+		});
+	}
+}
