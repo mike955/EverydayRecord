@@ -6,13 +6,13 @@ block content
 			.form-group
 			.form-group
 			.form-group
-				label.col-md-2.control-label(for='subject' style="font-size:20px; color:#F4A460") 学科
-				.col-md-3.col-md-offset-1
+				label.col-md-2.col-md-offset-1.control-label(for='subject' style="font-size:20px; color:#F4A460; text-align: left") 学科
+				.col-md-3
 					select.form-control.input-md(name = 'subject')
 						option 计算机
 			.form-group
-				label.col-md-2.control-label(for='category' style="font-size:20px; color:#F4A460") 类别
-				.col-md-3.col-md-offset-1
+				label.col-md-2.col-md-offset-1.control-label(for='category' style="font-size:20px; color:#F4A460; text-align: left") 类别
+				.col-md-3
 					select.form-control.input-md(name = 'category')
 						option 数据库
 						option Node.js
@@ -24,12 +24,12 @@ block content
 						option HTML+CSS
 						option 其它
 			.form-group
-				label.col-md-3.control-label(for='planTime' style="font-size:20px; color:#F4A460") 计划完成时间
+				label.col-md-2.col-md-offset-1.control-label(for='planTime' style="font-size:20px; color:#F4A460; text-align: left") 计划完成时间
 				.col-md-3
 					input.form-control(name='planTime', placeholder='时间' id='datetimepicker')
 			.form-group
-				label.col-md-2.control-label(for='content' style="font-size:20px; color:#F4A460") 内容
-				.col-md-5.col-md-offset-1
+				label.col-md-2.col-md-offset-1.control-label(for='content' style="font-size:20px; color:#F4A460; text-align: left") 内容
+				.col-md-5
 					textarea.form-control(row=5, name='content', placeholder='内容' style="height: 100px")
 			.form-group
 				.col-md-offset-3

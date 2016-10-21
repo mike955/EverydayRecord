@@ -26,24 +26,24 @@ export default class StudyPlan{
 			let new_data = {};
 
 			if(study_plan_data.subject === ''){
-				res.render('breaking_new/create', {
+				res.render('study_plan/create', {
 					user: req.session.user,
 					info: '请填写学科类型'
 				});
 			}else if(study_plan_data.category=== '') {
-				res.render('breaking_new/create', {
+				res.render('study_plan/create', {
 					user: req.session.user,
 					info: '请填写学科类别'
 				});
 			} else if(study_plan_data.planTime === ''){
-				res.render('breaking_new/create', {
+				res.render('study_plan/create', {
 					user: req.session.user,
 					info: '请填写计划完成时间'
 				});
 			} else if(study_plan_data.content === ''){
-				res.render('breaking_new/create', {
+				res.render('study_plan/create', {
 					user: req.session.user,
-					info: '请填写大事件内容'
+					info: '请填写学习计划内容'
 				});
 			}else{
 				/*转为学科为对应数字进行存储

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /***** import node.js librarie *****/
 
 /***** import third-party libraries *****/
@@ -17,7 +17,7 @@ const RedisStore = connectRedis(session);
 
 /*********express设置*********/
 app.set('views', path.join(__dirname, 'app/views/pages'))
-	.set('view engine', 'pug')
+	.set('view engine', 'pug');
 /*	.engine('.html', ejs.__express)
 	.set('view engine', 'html')	*/
 
@@ -31,7 +31,7 @@ app
 		saveUninitialized: true,
 		secret: 'everyday_record',
 		store: new RedisStore(config.redisConfig)
-	}))
+	}));
 
 /*********路由*********/
 router(app);
