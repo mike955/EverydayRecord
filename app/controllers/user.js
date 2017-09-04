@@ -91,7 +91,7 @@ exports.signup =async function(req, res){
 exports.signin = async function (req, res) {
 	let user_data = req.body;
 	//判断用户名和密码
-	let result =await User.signin(user_data);
+	let result = await User.signin(user_data);
 
 	//用户名不存在
 	if(result === 'usernameIsNotExist'){
@@ -111,7 +111,8 @@ exports.signin = async function (req, res) {
 
 	//登陆成功
 	if(result === 'success'){
-		req.session.user = user_data;
+		console.log(user_data);
+		req.session.user= user_data;
 		res.redirect('/main');
 	}
 }
